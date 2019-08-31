@@ -90,20 +90,22 @@ class DataModule {
         return dataRepository
     }
 
-
     @Provides
     @Singleton
     fun provideViewModelFactory(mListOfUsersUC: ListOfUsersUC): ViewModelProvider.Factory {
         return ViewModelFactory(mListOfUsersUC)
     }
 
-    @Provides
+    /*@Provides
     @Singleton
-    fun provideDataMapper(
-        rest: RestApi,
-        mapper: DataMapper
-    ): DataRepository {
-        return DataRepository(rest,mapper)
+    fun provideDataMapper(rest: RestApi,mapper: DataMapper): DataRepository {
+        return DataRepository(rest, mapper)
+    }*/
+
+    @Singleton
+    @Provides
+    fun provideDataMapper(): DataMapper {
+        return DataMapper()
     }
 
 

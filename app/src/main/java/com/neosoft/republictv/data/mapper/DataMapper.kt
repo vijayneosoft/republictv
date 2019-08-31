@@ -4,11 +4,13 @@ import com.neosoft.republictv.data.response.ListOfUserResponse
 import com.neosoft.republictv.domain.entity.*
 import retrofit2.Response
 import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  * Created by Vijay on 30/8/19.
  */
 
+@Singleton
 class DataMapper @Inject constructor() {
 
     fun mapListOfUsersMapper(response: Response<ListOfUserResponse>): ListOfUserEntity {

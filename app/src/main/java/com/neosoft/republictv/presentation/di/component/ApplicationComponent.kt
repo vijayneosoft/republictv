@@ -2,6 +2,7 @@ package com.neosoft.republictv.presentation.di.component
 
 import android.content.Context
 import com.neosoft.republictv.data.net.RestApi
+import com.neosoft.republictv.domain.repository.Repository
 import com.neosoft.republictv.presentation.di.module.ApplicationModule
 import com.neosoft.republictv.presentation.di.module.ContextModule
 import com.neosoft.republictv.presentation.di.module.DataModule
@@ -12,6 +13,7 @@ import javax.inject.Singleton
 /**
  * Created by Vijay on 30/8/19.
  */
+
 @Singleton
 @Component(modules = arrayOf(ApplicationModule::class, DataModule::class, ContextModule::class))
 interface ApplicationComponent {
@@ -21,6 +23,8 @@ interface ApplicationComponent {
     fun restApi(): RestApi
 
     fun getContext(): Context
+
+    fun getRepository(): Repository
 
 
 }
