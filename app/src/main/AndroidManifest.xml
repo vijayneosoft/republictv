@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="com.neosoft.republictv">
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:name="com.neosoft.republictv.presentation.UserApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+                android:name="com.neosoft.republictv.presentation.view.activity.ListOfUsersActivity"
+                android:label="@string/title_list_users"/>
+
+        <activity
+                android:name="com.neosoft.republictv.presentation.view.activity.DetailsOfUsersActivity"
+                android:label="@string/title_users_details"
+        />
+        <activity android:name="com.neosoft.republictv.presentation.view.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

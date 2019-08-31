@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_grey"
+>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/dimen_10dp"
+            android:layout_margin="@dimen/dimen_16dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/color_grey"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    >
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#FFFFFF"
+            >
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="16dp"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="16dp"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_begin="16dp"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_end="16dp"/>
+
+                <!--        User Profile Image-->
+                <ImageView
+                        android:id="@+id/img_user"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="@string/cd_user_image"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="@+id/guideline7"
+                        tools:srcCompat="@tools:sample/avatars"/>
+
+                <!--        User Real Name-->
+                <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="TextView"
+                        android:textAppearance="?attr/textAppearanceHeadline5"
+                        app:layout_constraintEnd_toEndOf="@+id/img_user"
+                        app:layout_constraintStart_toStartOf="@+id/img_user"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user"
+                        tools:text="Vijay Chalwadi"
+
+                />
+
+                <!--        Location Info-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dimen_16dp"
+                        android:paddingBottom="@dimen/dimen_16dp"
+                        android:paddingStart="@dimen/dimen_8dp"
+                        android:layout_marginTop="@dimen/dimen_16dp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_3">
+
+                    <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_location_on_black_24dp"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_begin="60dp"/>
+
+                    <TextView
+                            android:id="@+id/txt_street"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="TextView"
+                            android:textSize="@dimen/dimen_16sp"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                            app:layout_constraintStart_toStartOf="@+id/guideline10"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="9807 rue paul bert"/>
+
+                    <TextView
+                            android:id="@+id/txt_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="TextView"
+                            android:textSize="@dimen/dimen_16sp"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                            app:layout_constraintStart_toStartOf="@+id/txt_street"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_street"
+                            tools:text="la folliaz"/>
+
+                    <TextView
+                            android:id="@+id/txt_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="TextView"
+                            android:textSize="@dimen/dimen_16sp"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                            app:layout_constraintStart_toStartOf="@+id/txt_city"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_city"
+                            tools:text="bern"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                        android:id="@+id/view_horizontalLine"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="#C0C0C0"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout_1"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@id/constraintLayout_3"/>
+
+                <!--        User Info-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dimen_16dp"
+                        android:paddingBottom="@dimen/dimen_16dp"
+                        android:paddingStart="@dimen/dimen_8dp"
+                        android:layout_marginTop="@dimen/dimen_16dp"
+                        app:layout_constraintEnd_toEndOf="@id/guideline2"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_name">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/guideline11"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_contact_mail_black_24dp"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_begin="60dp"/>
+
+                    <TextView
+                            android:id="@+id/txt_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="TextView"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                            app:layout_constraintStart_toStartOf="@+id/guideline11"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="damaris.boyer@example.com"
+                            android:textSize="@dimen/dimen_16sp"
+                    />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

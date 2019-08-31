@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">architecture</string>
+
+    <!--title-->
+    <string name="title_list_users">Users List</string>
+    <string name="title_users_details">Users Details</string>
+
+
+    <!--information-->
+    <string name="info_success">Success</string>
+    <string name="info_error">Error</string>
+
+    <string name="cd_user_image">User Image</string>
+    <string name="birth_date">Born %s</string>
+    <string name="tv_joined">Joined %s</string>
+
+
+</resources>
